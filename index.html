@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI STUDENT Platform </title>
+
+    <link rel="stylesheet" href="frontend2.css">
+</head>
+
+<body >
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2> EduAI</h2>
+
+        <p class="menu-title">MAIN MENU</p>
+
+        <a href="#dashboard" class="active"> Dashboard</a>
+        <a href="#students"> Students</a>
+        <a href="#performance"> Performance</a>
+        <a href="#risk">Risk Analysis</a>
+        <a href="#recommendations"> Recommendations</a>
+
+        <div class="sidebar-bottom">
+            <p>AI-Powered Platform</p>
+            <small>Student Success System</small>
+        </div>
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="topbar">
+            <div>
+                <h1>Student Analytics Dashboard</h1>
+                <p>Monitor student performance and improve academic success.</p>
+            </div>
+
+            <div class="profile">
+                <span></span>
+                <div>
+                    <strong>Admin</strong>
+                    <small>Administrator</small>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- Dashboard -->
+        <section id="dashboard">
+
+            <div class="welcome">
+                <div>
+                    <h2>Welcome to EduAI </h2>
+                    <p>Understand student performance with intelligent analytics.</p>
+                </div>
+
+                <button onclick="refreshDashboard()">
+                     Refresh Data
+                </button>
+            </div>
+
+
+            <!-- Statistics Cards -->
+            <div class="stats-container">
+
+                <div class="stat-card">
+                    <p>Total Students</p>
+                    <h2 id="totalStudents">120</h2>
+                    <span>Registered students</span>
+                </div>
+
+                <div class="stat-card">
+                    <p>Average Performance</p>
+                    <h2 id="averageScore">76%</h2>
+                    <span>Average academic score</span>
+                </div>
+
+                <div class="stat-card">
+                    <p>At-Risk Students</p>
+                    <h2 id="riskCount">3</h2>
+                    <span>Require additional support</span>
+                </div>
+
+                <div class="stat-card">
+                    <p>Average Attendance</p>
+                    <h2 id="attendance">82%</h2>
+                    <span>Attendance percentage</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Performance -->
+        <section id="performance" class="panel">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Academic Performance</h2>
+                    <p>Compare students' academic scores.</p>
+                </div>
+            </div>
+
+            <div class="chart" id="performanceChart">
+                <!-- Chart bars are created using JavaScript -->
+            </div>
+
+        </section>
+
+
+        <!-- Students Table -->
+        <section id="students" class="panel">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Student Records</h2>
+                    <p>Review student academic information.</p>
+                </div>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search student..."
+                    oninput="searchStudents()"
+                >
+            </div>
+
+            <div class="table-wrapper">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Name</th>
+                            <th>Attendance</th>
+                            <th>Marks</th>
+                            <th>Risk Level</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentTable"></tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- Risk Analysis -->
+        <section id="risk" class="panel">
+
+            <h2> Student Risk Analysis</h2>
+
+            <p class="description">
+                Identify students who may need additional academic support.
+            </p>
+
+            <div id="riskAnalysis"></div>
+
+        </section>
+
+
+        <!-- Recommendations -->
+        <section id="recommendations" class="panel">
+
+            <h2>AI Success Recommendations</h2>
+
+            <p class="description">
+                Example recommendations based on student performance.
+            </p>
+
+            <div class="recommendation-grid">
+
+                <div class="recommendation-card">
+                    <h3> Academic Improvement</h3>
+                    <p>
+                        Students with low marks should receive additional
+                        practice exercises and tutoring.
+                    </p>
+                </div>
+
+                <div class="recommendation-card">
+                    <h3> Attendance Support</h3>
+                    <p>
+                        Students with low attendance should receive reminders
+                        and appropriate support.
+                    </p>
+                </div>
+
+                <div class="recommendation-card">
+                    <h3> Personalized Learning</h3>
+                    <p>
+                        Recommend learning materials based on each student's
+                        weaker subjects and learning needs.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+            <p>EduAI Student Success Platform | Frontend Demo</p>
+        </footer>
+
+    </main>
+
+    <script src="frontend3.js"></script>
+
+</body>
+</html>
